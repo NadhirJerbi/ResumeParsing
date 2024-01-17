@@ -1,0 +1,9 @@
+perplexityai==0.1
+Pillow==9.3.0
+Pillow==9.0.1
+Pillow==10.2.0
+PyMuPDF==1.21.1
+Requests==2.31.0
+streamlit==1.25.0
+tika==2.6.0
+torch==1.13.1

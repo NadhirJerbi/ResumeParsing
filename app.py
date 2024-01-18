@@ -168,7 +168,6 @@ The parsing functionality utilizes the Perplexity AI Python library.""")
                     with st.expander(f" 🗃️ More details  {resume.name} ", expanded=False):
                         col1, col2 = st.columns([1, 3])
                         with col1:
-                            st.title(" ")
                             profile_image = Image.open(imgPathsJson['pathImg'])  # Add your profile picture
                             if x :
                                 profile_image=profile_image.crop((int(x), int(y), int(x1), int(y1)))
@@ -186,7 +185,7 @@ The parsing functionality utilizes the Perplexity AI Python library.""")
                             profile_image.putalpha(mask)
                             
                             # Afficher l'image de profil dans un cercle
-                            st.image(profile_image, width=100,clamp=True)
+                            st.image(profile_image, width=100,use_column_width=True)
                             
                         with col2:
                             if 'Name' in resumeJson:

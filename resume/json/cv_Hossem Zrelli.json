@@ -1,0 +1,84 @@
+{
+  "Name": "Hossem Zrelli",
+  "Job_title": "Soudeur",
+  "Email": "houssemzrelli3@gmail.com",
+  "Phone": "+216 26003206",
+  "Location": "8030, Mhanna, Beni kahlled, Nabeul, Tunis",
+  "Other_contact": [],
+  "Profile": "Ma\u00eetrise de soudure par cuivre, arc, TIG, aluminium, MIG et font. Flexible, ponctuel et sociable.",
+  "Experience": [
+    {
+      "job_title": "Soudeur",
+      "company": "Atelier de Soudure ZAOUIT DJDID",
+      "description": "Conception et soudure de fen\u00eatres et portes, soudage par proc\u00e9d\u00e9s TIG et arc",
+      "skills": [
+        "TIG",
+        "Arc"
+      ],
+      "start_date": "01/07/2018",
+      "end_date": "30/12/2019",
+      "location": ""
+    },
+    {
+      "job_title": "Soudeur",
+      "company": "Groupe Maintenance ICEM Tunisie",
+      "description": "Soudure de ch\u00e2ssis, tables et supports",
+      "skills": [],
+      "start_date": "23/01/2020",
+      "end_date": "22/01/2021",
+      "location": ""
+    },
+    {
+      "job_title": "Soudeur",
+      "company": "SPIM",
+      "description": "Soudure de tables et tabourets par proc\u00e9d\u00e9s semi-automatiques (MIG)",
+      "skills": [
+        "MIG"
+      ],
+      "start_date": "23/06/2021",
+      "end_date": "31/03/2022",
+      "location": ""
+    },
+    {
+      "job_title": "Soudeur",
+      "company": "Atelier de Soudure Grombelia",
+      "description": "Montage et fixation de portes \u00e9lectriques, soudage par arc et cuivre",
+      "skills": [
+        "Arc",
+        "Cuivre"
+      ],
+      "start_date": "01/04/2022",
+      "end_date": "31/08/2023",
+      "location": ""
+    }
+  ],
+  "Education": [
+    {
+      "degree": "Soudeur Monteur",
+      "major": "",
+      "school": "Centre Sectoriel de Formation Grombalia",
+      "location": "",
+      "graduation_date": "30/06/2018"
+    }
+  ],
+  "Projects": [],
+  "Skills": [
+    "Fran\u00e7ais A2",
+    "Arabe Langue maternelle"
+  ],
+  "Certificates": [],
+  "Languages": [
+    {
+      "language": "fran\u00e7ais",
+      "level": "A2"
+    },
+    {
+      "language": "Arabe",
+      "level": "Langue maternelle"
+    }
+  ],
+  "Interests": [],
+  "Achievement": [],
+  "References": [],
+  "Community": []
+}

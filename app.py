@@ -1,4 +1,3 @@
-import torch   
 import streamlit as st
 from PIL import Image,ImageDraw, ImageOps
 import os
@@ -14,6 +13,42 @@ from tika import parser
 from perplexity import Perplexity
 from query import query
 
+def extract_Profile_image(pdf_path, output_image_path):
+    # Open the PDF file
+    pdf_document = fitz.open(pdf_path)
+    page = pdf_document.load_page(0)
+    image_list = page.get_images(full=True)
+
+    # Initialize variables to store information about the largest image
+    largest_image_width = 0
+    largest_image_height = 0
+    largest_image_bytes = None
+
+    # Iterate through the images on the page
+    for image_index, img in enumerate(image_list):
+        xref = img[0]
+        base_image = pdf_document.extract_image(xref)
+        image_bytes = base_image["image"]
+        image_width = base_image["width"]
+        image_height = base_image["height"]
+
+        # Check if the current image is larger than the previous largest image
+        if image_width > largest_image_width and image_height > largest_image_height:
+            largest_image_width = image_width
+            largest_image_height = image_height
+            largest_image_bytes = image_bytes
+
+    if largest_image_bytes:
+        # Save the largest image to a file
+        image_file = open(output_image_path, "wb")
+        image_file.write(largest_image_bytes)
+        image_file.close()
+        return output_image_path
+    else:
+        return convert_pdf2img(pdf_path,output_image_path)
+
+    # Close the PDF
+    pdf_document.close()
 
 def conver2pdf(file,fileName):
     instructions = {'parts': [{'file': 'document'}]}
@@ -54,7 +89,7 @@ def saveFile(file,fileName):
         temp_file.write(file.read())
         temp_file_path = temp_file.name
         fitz.open(temp_file_path).save(pathPdf)
-        resumeImg = convert_pdf2img(pathPdf,pathImg)
+        resumeImg = extract_Profile_image(pathPdf,pathImg)
         temp_file.close()
         return pathPdf,pathImg
     
@@ -87,11 +122,9 @@ def remove_empty_fields(obj):
         return [remove_empty_fields(item) for item in obj if item is not None and remove_empty_fields(item)]
     else:
         return obj   
-      
-model = torch.hub.load('ultralytics/yolov5', 'custom', './bestv4I.pt')
+
 perplexity = Perplexity()
 def fnDectec(file):
-        model.conf = 0.1
         filesSections=[]
         fileName = (file.name).split(".")[0]
         # Check if the file extension is one of the allowed formats
@@ -101,8 +134,6 @@ def fnDectec(file):
                 file = conver2pdf(file,fileName)
             # Save the file to a specific path and obtain the paths to the PDF and image versions   
             pathPdf,pathImg=saveFile(file,fileName)
-            # Apply the model to the image file and save the results with labels
-            results = model(pathImg, size=int(680))      
             resume = extract_text_from_pdf(pathPdf)
             # Make a query
             query1 = "Convert this resume `"+resume+query
@@ -118,7 +149,7 @@ def fnDectec(file):
                 print(resumeJson)
             with open(f'./resume/json/{fileName}.json', 'w') as json_file:
                 json.dump(resumeJson, json_file, indent=2)
-            data = {"resumeJson":resumeJson, "path":{"pathImg":pathImg,"pathPDF":pathPdf,},"confidence":results.pandas().xyxy[0].to_json(orient ='index')}
+            data = {"resumeJson":resumeJson, "path":{"pathImg":pathImg,"pathPDF":pathPdf,}}
             filesSections.append(data)
         else:
             print(file + " is not a valid file.") 
@@ -156,22 +187,13 @@ The parsing functionality utilizes the Perplexity AI Python library.""")
                             resumeJson=response[0]['resumeJson']
                             imgPathsJson=response[0]['path']
                             allResume.append({'resume':resume.name,'content':resumeJson})
-                            x=None
-                            for key, value in json.loads(response[0]['confidence']).items():
-                                
-                                if  value["name"] == "image" :
-                                    x,y,x1,y1 = value["xmin"],value["ymin"],value["xmax"],value["ymax"]
-                    
-        
-                           
+                            x=None                                    
                     
                     with st.expander(f" 🗃️ More details  {resume.name} ", expanded=False):
                         col1, col2 = st.columns([1, 3])
                         with col1:
                             profile_image = Image.open(imgPathsJson['pathImg'])  # Add your profile picture
-                            if x :
-                                profile_image=profile_image.crop((int(x), int(y), int(x1), int(y1)))
-                            
+                                                        
                             # Recadrer l'image en un carré
                             size = min(profile_image.size)
                             profile_image = ImageOps.fit(profile_image, (size, size))

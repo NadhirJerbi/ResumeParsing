@@ -124,6 +124,7 @@ def remove_empty_fields(obj):
         return obj   
 
 perplexity = Perplexity()
+
 def fnDectec(file):
         filesSections=[]
         fileName = (file.name).split(".")[0]

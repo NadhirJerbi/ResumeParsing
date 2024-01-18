@@ -1,4 +1,4 @@
-perplexityai
+git+https://github.com/nathanrchn/perplexityai.git
 Pillow
 PyMuPDF
 Requests

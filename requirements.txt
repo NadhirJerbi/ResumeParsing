@@ -28,7 +28,6 @@ boto==2.49.0
 boto3==1.16.63
 botocore==1.19.63
 boxing==0.1.4
-Brlapi==0.8.3
 browser-cookie3==0.19.1
 cachetools==5.2.0
 catalogue==2.0.8

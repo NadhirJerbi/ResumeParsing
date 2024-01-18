@@ -6,3 +6,5 @@ streamlit==1.25.0
 tika==2.6.0
 torch==1.13.1
 websocket-client==1.4.2
+pip install --upgrade git+https://github.com/ultralytics/yolov5.git
+

@@ -1,7 +1,7 @@
 perplexityai @ git+https://github.com/nathanrchn/perplexityai.git@b4eed9ff2522ffba5b671843a0f912d9024d99e5
 Pillow==9.3.0
 PyMuPDF==1.21.1
-Request
+requests==2.25.1
 streamlit==1.25.0
 tika==2.6.0
 torch==1.13.1

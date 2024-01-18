@@ -88,7 +88,7 @@ def remove_empty_fields(obj):
     else:
         return obj   
       
-model = torch.hub.load('ultralytics/yolov5', 'custom', './bestv4.pt')
+model = torch.hub.load('ultralytics/yolov5', 'custom', './bestv4I.pt')
 perplexity = Perplexity()
 def fnDectec(file):
         model.conf = 0.1

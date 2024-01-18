@@ -92,7 +92,6 @@ model = torch.hub.load('ultralytics/yolov5', 'custom', './bestv4I.pt')
 perplexity = Perplexity()
 def fnDectec(file):
         model.conf = 0.1
-        model.classes = [11]
         filesSections=[]
         fileName = (file.name).split(".")[0]
         # Check if the file extension is one of the allowed formats

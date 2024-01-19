@@ -1,0 +1,193 @@
+{
+  "Name": "Nadhir Jerbi",
+  "Job_title": "Data Scientist",
+  "Email": "nadhir.jrb@gmail.com",
+  "Phone": "+216 20816995",
+  "Location": "Nabeul, Tunisia",
+  "Other_contact": [
+    {
+      "contact_type": "LinkedIn",
+      "link": "https://www.linkedin.com/in/jerbi-nadhir/"
+    },
+    {
+      "contact_type": "GitHub",
+      "link": "https://github.com/NadhirJerbi"
+    }
+  ],
+  "Profile": "Passionate full-stack developer and aspiring data scientist/engineer dedicated to leveraging cutting- edge technologies for impactful solutions. I excel at navigating the dynamic interplay of code and data, solving challenges creatively, and ensuring project success. Let's craft a future where innovation meets efficiency, one line of code at a time.",
+  "Experience": [
+    {
+      "job_title": "Data Scientist Intern",
+      "company": "SasLab",
+      "description": "Led the development of an intelligent system for extracting data from resumes.",
+      "skills": [
+        "Crisp-DM",
+        "Artificial Intelligence",
+        "Deep Learning",
+        "Transfer Learning",
+        "Data Mining"
+      ],
+      "start_date": "Dec 2022",
+      "end_date": "Apr 2023",
+      "location": "Nabeul, Tunsia"
+    },
+    {
+      "job_title": "Full-Stack Developer Intern",
+      "company": "RBK (Rebootkamp)",
+      "description": "Engineered an e-learning platform for RBK.",
+      "skills": [
+        "Scrum",
+        "Node.JS",
+        "Nest.js",
+        "Vue.js",
+        "MongoDB",
+        "Azure Storage"
+      ],
+      "start_date": "Jan 2020",
+      "end_date": "Sep 2020",
+      "location": "Ariana, Tunisia"
+    },
+    {
+      "job_title": "Web Developer Intern",
+      "company": "F.A.D (Fourniture Auto et D\u00e9riv\u00e9s)",
+      "description": "Architected and developed the company website.",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery",
+        "VueJs",
+        "PHP",
+        "MySQL"
+      ],
+      "start_date": "Jan 2019",
+      "end_date": "",
+      "location": "Ben Arous, Tunisia"
+    },
+    {
+      "job_title": "Trainee",
+      "company": "E.K.G (El Kateb Group)",
+      "description": "Contributed to developing a BI module on F.A.D. company profits.",
+      "skills": [
+        "Dynamics NAV",
+        "SQL Server",
+        "QlikView"
+      ],
+      "start_date": "Jan 2017",
+      "end_date": "",
+      "location": "Ben Arous, Tunisia"
+    }
+  ],
+  "Education": [
+    {
+      "degree": "Vocational Masters",
+      "major": "Digital Entrepreneurship In Data Science",
+      "school": "Higher Institute for Technological Studies",
+      "location": "Nabeul, Tunisia",
+      "graduation_date": "2023"
+    },
+    {
+      "degree": "Applied License",
+      "major": "Information system development",
+      "school": "Higher Institute for Technological Studies",
+      "location": "Nabeul, Tunisia",
+      "graduation_date": "2020"
+    },
+    {
+      "degree": "High School",
+      "major": "Computer Science",
+      "school": "Secondary High School Nahj el manzah street",
+      "location": "Beni khalled, Tunisia",
+      "graduation_date": "2016"
+    }
+  ],
+  "Projects": [
+    {
+      "project_title": "Price Forecast for Used Cars in Tunisia",
+      "description": "Trained a model predicting the price of used cars.",
+      "skills": [
+        "BeautifulSoup",
+        "Selenium",
+        "pandas",
+        "DecisionTree",
+        "Matplotlib",
+        "Scikit-Learn"
+      ]
+    },
+    {
+      "project_title": "Analysis of the Sentiments of Twitter's Tweets",
+      "description": "Developed a real-time Twitter sentiment analytics app.",
+      "skills": [
+        "Firebase",
+        "replit",
+        "textblob",
+        "NLTK",
+        "NLP"
+      ]
+    }
+  ],
+  "Skills": [
+    "Python",
+    "JavaScript",
+    "Scala",
+    "R",
+    "MySQL",
+    "Oracle",
+    "Neo4j",
+    "Firebase",
+    "MongoDB",
+    "Scikit-Learn",
+    "TensorFlow",
+    "Pandas",
+    "Numpy",
+    "Matplotlib",
+    "Streamlit",
+    "Beautiful Soup",
+    "Selenium",
+    "Flask",
+    "Node.js",
+    "Nest.js",
+    "Vue.js",
+    "Spark",
+    "Kafka",
+    "Docker",
+    "Docker Compose",
+    "Git",
+    "Github",
+    "Linux",
+    "Windows",
+    "Azure",
+    "Scrum",
+    "Kanban",
+    "Crisp-DM"
+  ],
+  "Certificates": [
+    "ACJEMP - Soft Skills",
+    "MTA\u2013 Database Administration Fundamentals",
+    "SoloLearn -Data Science",
+    "FreeCodeCamp -JavaScript Algorithms and Data Structures",
+    "FreeCodeCamp -Scientific Computing with Python"
+  ],
+  "Languages": [
+    {
+      "language": "Arabic",
+      "level": "Mother tongue"
+    },
+    {
+      "language": "English",
+      "level": "Intermediate"
+    },
+    {
+      "language": "French",
+      "level": "Intermediate"
+    }
+  ],
+  "Interests": [
+    "Camping",
+    "Tourist travel",
+    "Bodyweight training"
+  ],
+  "Achievement": [],
+  "References": [],
+  "Community": []
+}

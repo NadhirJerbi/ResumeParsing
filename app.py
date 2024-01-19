@@ -122,7 +122,10 @@ def remove_empty_fields(obj):
         return [remove_empty_fields(item) for item in obj if item is not None and remove_empty_fields(item)]
     else:
         return obj   
+import subprocess
 
+# Install the library using pip
+subprocess.run(["pip", "install", "git+https://github.com/nathanrchn/perplexityai.git"])
 perplexity = Perplexity()
 
 def fnDectec(file):
